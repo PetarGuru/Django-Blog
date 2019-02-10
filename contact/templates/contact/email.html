@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+</head>
+<body>
+{% block content %}
+
+
+{% if error %}
+{{ error }}
+<br /><br />
+{% endif %}
+
+<h1>Contact me</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <br />{{ form.subject.label_tag }}<br />
+    {{ form.subject }}
+
+    <br />{{ form.name.label_tag }}<br/>
+    {{ form.name }}
+
+    <br />{{ form.email.label_tag }}<br />
+    {{ form.email }}
+
+    <br />{{ form.message.label_tag }}<br />
+    {{ form.message }}
+
+    <br /><br />
+    <input class="btn btn-primary" type="submit" value="Send" />
+
+</form>
+
+{% endblock %}
+</body>
+</html>

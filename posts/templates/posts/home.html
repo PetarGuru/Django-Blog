@@ -7,7 +7,6 @@
 </head>
 <body>
 {% block content %}
-<br/><br/>
 {% load staticfiles %}
 
 <main role="main">
@@ -15,9 +14,9 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Hi, I'm Petar.</h1>
-      <p class="lead text-muted">Hey, welcome to my web blog. My name is Petar Mulaj and I like to make django web sites.</p>
+      <p class="lead text-muted">Welcome to my Blog about Software testing. I am Test engineer in a huge corporation. I want to teach you how to create an automation projects from scratch using testing frameworks.</p>
       <p>
-        <a href="mailto:petarmulaj@gmail.com" class="btn btn-primary my-2">Email Me</a>
+        <a href="{% url 'email' %}" class="btn btn-primary my-2">Email Me</a>
       </p>
       <img src="{% static 'petar.jpg' %}" />
     </div>
